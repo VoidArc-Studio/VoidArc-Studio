@@ -1,0 +1,30 @@
+[package]
+name = "Blue-Enviroment"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+smithay = { version = "0.3", features = ["backend_winit", "xwayland"] }
+egui = "0.27"
+eframe = "0.27"
+toml = "0.8"
+xkbcommon = "0.7"
+image = "0.24"
+chrono = "0.4"
+env_logger = "0.11"
+log = "0.4"
+
+[lib]
+path = "src/lib.rs"
+
+[[bin]]
+name = "blue-compositor"
+path = "src/compositor.rs"
+
+[[bin]]
+name = "blue-launcher"
+path = "src/launcher.rs"
+
+[[bin]]
+name = "blue-desktop-environment"
+path = "src/main.rs"
