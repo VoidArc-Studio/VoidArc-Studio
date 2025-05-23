@@ -1,0 +1,18 @@
+[apps]
+browser = "brave"
+game_launcher = "steam"
+software_center = "gnome-software"
+terminal = "wezterm"
+kwalletmanager5 = "kwalletmanager5"
+
+[appearance]
+theme = "modern"
+fullscreen_by_default = true
+background = "/usr/share/backgrounds/blue_background.png"
+browser_icon = "/usr/share/icons/blue_browser.png"
+game_launcher_icon = "/usr/share/icons/blue_games.png"
+software_center_icon = "/usr/share/icons/blue_software.png"
+terminal_icon = "/usr/share/icons/blue_terminal.png"
+
+[settings]
+timezone = "Europe/Warsaw"
