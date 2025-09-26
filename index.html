@@ -1,1 +1,186 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoidArc Studio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(145deg, #06061b 0%, #1c0d4d 100%);
+            color: #ffffff;
+            font-family: 'Poppins', sans-serif;
+            min-height: 100vh;
+            margin: 0;
+            overflow-x: hidden;
+        }
+        a {
+            color: #864dcf;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #864dcf;
+            transition: width 0.3s ease;
+        }
+        a:hover::after {
+            width: 100%;
+        }
+        a:hover {
+            color: #ffffff;
+        }
+        .section-heading {
+            font-size: 4rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 3.5rem;
+            background: linear-gradient(90deg, #44299b, #864dcf);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .card {
+            background: rgba(28, 13, 77, 0.9);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(68, 41, 155, 0.5);
+            border-radius: 1.5rem;
+            padding: 3rem;
+            margin-bottom: 4rem;
+            transition: all 0.4s ease;
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5);
+            animation: cardAppear 1s ease-out;
+        }
+        @keyframes cardAppear {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(134, 77, 207, 0.4);
+            border-color: #864dcf;
+        }
+        .image-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            justify-content: center;
+            margin-top: 2.5rem;
+        }
+        .distro-image {
+            width: 100%;
+            height: auto;
+            max-height: 200px;
+            border-radius: 1rem;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            border: 2px solid rgba(134, 77, 207, 0.6);
+            object-fit: cover;
+        }
+        .distro-image:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 20px rgba(134, 77, 207, 0.6);
+        }
+        .logo {
+            transition: transform 0.3s ease;
+        }
+        .logo:hover {
+            transform: scale(1.15);
+        }
+        header {
+            background: rgba(6, 6, 27, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(68, 41, 155, 0.4);
+            padding: 1.5rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        .subtitle {
+            text-align: center;
+            font-size: 1.3rem;
+            color: #864dcf;
+            margin-bottom: 2.5rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+        footer {
+            background: rgba(6, 6, 27, 0.95);
+            backdrop-filter: blur(10px);
+            border-top: 1px solid rgba(68, 41, 155, 0.4);
+            padding: 1.5rem;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #ffffff;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="voidarc-studio.png" alt="VoidArc Studio Logo" class="w-36 h-auto logo">
+    </header>
+    <main class="container mx-auto px-6 py-12">
+        <h1 class="section-heading">VoidArc Studio</h1>
+        <p class="subtitle">Crafting Innovative Software for Gamers, Developers, and Creators</p>
+        
+        <section>
+            <h2 class="text-3xl font-semibold mb-8 text-center" style="color: #44299b;">Our Linux Distros</h2>
+            
+            <div class="card">
+                <h3 class="text-2xl font-bold mb-4" style="color: #864dcf;">HackerOS</h3>
+                <p class="mb-4 text-lg leading-relaxed">HackerOS is based on Debian Testing, created for gamers, developers, cybersecurity specialists, and normal users.</p>
+                <p class="mb-4 text-lg">Website: <a href="https://hackeros-linux-system.github.io/HackerOS-Website/Home-page.html" target="_blank">https://hackeros-linux-system.github.io/HackerOS-Website/Home-page.html</a></p>
+                <div class="image-container">
+                    <img src="hackeros.png" alt="HackerOS" class="distro-image">
+                    <img src="hackeros-hydra.png" alt="HackerOS Hydra" class="distro-image">
+                    <img src="hackeros-logo.png" alt="HackerOS Logo" class="distro-image">
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3 class="text-2xl font-bold mb-4" style="color: #864dcf;">LegendaryOS</h3>
+                <p class="mb-4 text-lg leading-relaxed">LegendaryOS is based on OpenSUSE Tumbleweed. LegendaryOS is a console gaming OS.</p>
+                <p class="mb-4 text-lg">Website: <a href="https://legendaryos.github.io/LegendaryOS/index.html" target="_blank">https://legendaryos.github.io/LegendaryOS/index.html</a></p>
+                <div class="image-container">
+                    <img src="legendaryos.png" alt="LegendaryOS" class="distro-image">
+                    <img src="legendaryos-logo.png" alt="LegendaryOS Logo" class="distro-image">
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3 class="text-2xl font-bold mb-4" style="color: #864dcf;">Zenit Linux</h3>
+                <p class="mb-4 text-lg leading-relaxed">Zenit Linux is based on OpenSUSE Tumbleweed. Zenit Linux is a console gaming OS.</p>
+                <p class="mb-4 text-lg">Website: <a href="https://legendaryos.github.io/LegendaryOS/index.html" target="_blank">https://legendaryos.github.io/LegendaryOS/index.html</a></p>
+                <div class="image-container">
+                    <img src="zenitlinux.png" alt="Zenit Linux" class="distro-image">
+                    <img src="zenitlinux-logo.png" alt="Zenit Linux Logo" class="distro-image">
+                </div>
+            </div>
+        </section>
+        
+        <section class="mt-16">
+            <h2 class="text-3xl font-semibold mb-8 text-center" style="color: #44299b;">Velvet Programming Language</h2>
+            <div class="card">
+                <p class="mb-4 text-lg leading-relaxed">Velvet is a programming language that has a special Weave compiler and a tool for executing programs written in Velvet. Write source code in .vel. Velvet can be written in Python, for example (use # {your Python code}).</p>
+                <p class="text-lg" style="color: #864dcf;">Website: Coming soon</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 VoidArc Studio. All rights reserved.</p>
+    </footer>
+</body>
+</html>
